@@ -1,0 +1,37 @@
+﻿@model PagedList.IPagedList<PayRoll.Models.Company>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "ListAllCompanies";
+}
+
+<h2>List All Companies</h2>
+
+<table class="table table-responsive table-bordered table-hover">
+    <thead class="bg-info">
+        <tr>
+            <th>
+                Company Name
+            </th>
+            <th>View Details</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "CompanyDetails", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("ListAllCompanies", new { page, pageSize = Model.PageSize }))
+
+@Html.ActionLink("Back to List", "Index")

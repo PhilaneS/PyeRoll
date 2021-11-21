@@ -1,0 +1,287 @@
+INFO  2021-11-18 21:39:49,215  7546ms Object                 Index              - lo4net OK
+INFO  2021-11-18 21:53:25,132 52199ms Object                 Index              - lo4net OK
+INFO  2021-11-18 21:54:02,165 89232ms Object                 MoveNext           - Caling GetAllCompanies
+INFO  2021-11-18 21:54:02,283 89350ms Object                 MoveNext           - GetAllCompanies excecuted successfully
+INFO  2021-11-18 21:54:18,816 105883ms Object                 Index              - lo4net OK
+INFO  2021-11-18 21:57:19,871 286938ms Object                 MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-18 21:57:19,933 286999ms Object                 MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-18 21:59:20,217  1781ms HomeController         Index              - lo4net OK
+INFO  2021-11-18 21:59:29,352 10916ms HomeController         MoveNext           - Caling GetAllCompanies
+INFO  2021-11-18 21:59:29,438 11001ms HomeController         MoveNext           - GetAllCompanies excecuted successfully
+INFO  2021-11-18 22:01:34,745  2212ms HomeController         Index              - lo4net OK
+INFO  2021-11-18 22:02:33,692 61159ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 00:36:57,982 14803ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 00:37:13,549 30370ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 00:37:43,036 59857ms HomeController         MoveNext           - ListAllEmployees Call failed
+ERROR 2021-11-19 00:37:43,038 59859ms HomeController         MoveNext           - System.ArgumentException: No mapping exists from object type System.Collections.Generic.List`1[[System.Data.SqlClient.SqlParameter, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] to a known managed provider native type.
+   at System.Data.SqlClient.MetaType.GetMetaTypeFromValue(Type dataType, Object value, Boolean inferLen, Boolean streamAllowed)
+   at System.Data.SqlClient.SqlParameter.GetMetaTypeOnly()
+   at System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   at System.Data.SqlClient.SqlCommand.BuildParamList(TdsParser parser, SqlParameterCollection parameters, Boolean includeReturnValue)
+   at System.Data.SqlClient.SqlCommand.BuildExecuteSql(CommandBehavior behavior, String commandText, SqlParameterCollection parameters, _SqlRPC& rpc)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PayRoll.Repository.EmployeeRepository.GetEmployeesByCountryName(Int32 pageNumber, Int32 pageSize, String countrName) in C:\PayRoll\PayRoll\Repository\EmployeeRepository.cs:line 41
+   at PayRoll.Controllers.HomeController.<ListSouthAfricanEmployees>d__8.MoveNext() in C:\PayRoll\PayRoll\Controllers\HomeController.cs:line 120
+INFO  2021-11-19 00:40:41,674 238495ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 00:42:16,723  1092ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 00:42:47,729 32099ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-19 00:42:47,789 32159ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-19 00:42:51,183 35553ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 00:43:01,006 45376ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 00:51:05,685 530055ms HomeController         MoveNext           - ListAllEmployees Call failed
+ERROR 2021-11-19 00:51:05,695 530065ms HomeController         MoveNext           - System.Data.SqlClient.SqlException (0x80131904): Procedure or function 'GetEmployeesByCountryName' expects parameter '@pageNumber', which was not supplied.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PayRoll.Repository.EmployeeRepository.GetEmployeesByCountryName(Int32 pageNumber, Int32 pageSize, String countrName)
+   at PayRoll.Controllers.HomeController.<ListSouthAfricanEmployees>d__8.MoveNext()
+ClientConnectionId:12b41b3f-bd98-43e3-a783-eedd6215c2a8
+Error Number:201,State:4,Class:16
+INFO  2021-11-19 00:52:28,729 15048ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 00:53:00,060 46378ms HomeController         MoveNext           - ListAllEmployees Call failed
+ERROR 2021-11-19 00:53:00,061 46379ms HomeController         MoveNext           - System.Data.Entity.Core.EntityCommandExecutionException: The data reader is incompatible with the specified 'PayRoll.Models.Employee'. A member of the type, 'Name', does not have a corresponding column in the data reader with the same name.
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetMemberOrdinalFromReader(DbDataReader storeDataReader, EdmMember member, EdmType currentType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetColumnMapsForType(DbDataReader storeDataReader, EdmType edmType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean streaming, EntitySet& entitySet, TypeUsage& edmType)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PayRoll.Repository.EmployeeRepository.GetEmployeesByCountryName(Int32 pageNumber, Int32 pageSize, String countrName) in C:\PayRoll\PayRoll\Repository\EmployeeRepository.cs:line 41
+   at PayRoll.Controllers.HomeController.<ListSouthAfricanEmployees>d__8.MoveNext() in C:\PayRoll\PayRoll\Controllers\HomeController.cs:line 120
+INFO  2021-11-19 00:56:19,693 246012ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 00:56:29,498 255816ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 00:57:38,530 324849ms HomeController         MoveNext           - ListAllEmployees Call failed
+ERROR 2021-11-19 00:57:38,532 324850ms HomeController         MoveNext           - System.Data.Entity.Core.EntityCommandExecutionException: The data reader is incompatible with the specified 'PayRoll.Models.Employee'. A member of the type, 'Position', does not have a corresponding column in the data reader with the same name.
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetMemberOrdinalFromReader(DbDataReader storeDataReader, EdmMember member, EdmType currentType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetColumnMapsForType(DbDataReader storeDataReader, EdmType edmType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean streaming, EntitySet& entitySet, TypeUsage& edmType)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PayRoll.Repository.EmployeeRepository.GetEmployeesByCountryName(Int32 pageNumber, Int32 pageSize, String countrName)
+   at PayRoll.Controllers.HomeController.<ListSouthAfricanEmployees>d__8.MoveNext()
+INFO  2021-11-19 00:57:41,466 327785ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-19 00:57:41,549 327868ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-19 01:01:35,154  1139ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 01:02:18,720 44706ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 01:08:14,599 400585ms HomeController         MoveNext           - ListAllEmployees Call failed
+ERROR 2021-11-19 01:08:14,601 400587ms HomeController         MoveNext           - System.Data.Entity.Core.EntityCommandExecutionException: The data reader is incompatible with the specified 'PayRoll.Models.Employee'. A member of the type, 'HomeAddressID', does not have a corresponding column in the data reader with the same name.
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetMemberOrdinalFromReader(DbDataReader storeDataReader, EdmMember member, EdmType currentType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.GetColumnMapsForType(DbDataReader storeDataReader, EdmType edmType, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Query.InternalTrees.ColumnMapFactory.CreateColumnMapFromReaderAndType(DbDataReader storeDataReader, EdmType edmType, EntitySet entitySet, Dictionary`2 renameList)
+   at System.Data.Entity.Core.Objects.ObjectContext.InternalTranslate[TElement](DbDataReader reader, String entitySetName, MergeOption mergeOption, Boolean streaming, EntitySet& entitySet, TypeUsage& edmType)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PayRoll.Repository.EmployeeRepository.GetEmployeesByCountryName(Int32 pageNumber, Int32 pageSize, String countrName)
+   at PayRoll.Controllers.HomeController.<ListSouthAfricanEmployees>d__8.MoveNext()
+INFO  2021-11-19 01:08:18,469 404454ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-19 01:08:18,496 404481ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-19 01:11:12,165 578151ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-19 01:11:12,173 578159ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-19 01:12:20,729  1429ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 01:12:32,556 13257ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 01:12:39,746 20446ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 01:16:15,501  1309ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 01:16:30,629 16437ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 10:52:17,305 11825ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 10:52:28,928 23449ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 10:53:18,173 72693ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 22:39:26,498 13689ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 22:39:39,234 26424ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 22:40:24,929   822ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 22:40:30,022  5914ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-19 22:40:30,063  5955ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-19 22:40:33,619  9511ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 22:40:38,655 14547ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 22:40:45,837 21730ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 22:57:58,235  8638ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 22:58:05,031 15434ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 23:00:13,426 143828ms HomeController         MoveNext           - ListAllEmployees Call failed
+ERROR 2021-11-19 23:00:13,462 143864ms HomeController         MoveNext           - System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@countrName".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__68()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass69`1.<ExecuteStoreQueryReliably>b__67()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at PayRoll.Repository.EmployeeRepository.GetEmployeesByCountryName(Int32 pageNumber, Int32 pageSize, String countrName)
+   at PayRoll.Controllers.HomeController.<ListSouthAfricanEmployees>d__8.MoveNext()
+ClientConnectionId:b286dd61-d714-43bc-b770-4f85049b02e6
+Error Number:137,State:2,Class:15
+INFO  2021-11-19 23:01:01,772 25375ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 23:20:51,818 1215421ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 23:21:00,396 1223999ms HomeController         MoveNext           - Caling GetAllCompanies
+INFO  2021-11-19 23:21:00,424 1224028ms HomeController         MoveNext           - GetAllCompanies excecuted successfully
+INFO  2021-11-19 23:21:02,718 1226321ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 23:21:04,637 1228240ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-19 23:21:04,656 1228259ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-19 23:21:06,664 1230267ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-19 23:21:06,671 1230274ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-19 23:21:08,566 1232169ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 23:21:17,443 1241046ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 23:21:19,639 1243242ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 23:21:47,793 1271396ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 23:21:49,397 1273000ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 23:33:34,498 1978101ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 23:34:09,057 2012660ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 23:35:58,926  7388ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 23:36:05,030 13491ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 23:36:27,924 36386ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 23:38:32,298  6378ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 23:38:41,484 15565ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 23:38:44,478 18558ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 23:46:10,940  6031ms HomeController         Index              - lo4net OK
+INFO  2021-11-19 23:46:17,404 12495ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-19 23:46:19,219 14310ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-19 23:55:07,481  6648ms HomeController         Index              - lo4net OK
+INFO  2021-11-20 00:06:29,444 688611ms HomeController         Index              - lo4net OK
+INFO  2021-11-20 00:08:02,868 782035ms HomeController         Index              - lo4net OK
+INFO  2021-11-20 00:08:09,589 788756ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-20 00:08:09,625 788792ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-20 00:08:49,997 829164ms HomeController         Index              - lo4net OK
+INFO  2021-11-20 00:08:51,868 831035ms HomeController         MoveNext           - Caling GetAllCompanies
+INFO  2021-11-20 00:08:51,890 831057ms HomeController         MoveNext           - GetAllCompanies excecuted successfully
+INFO  2021-11-20 00:08:53,923 833090ms HomeController         Index              - lo4net OK
+INFO  2021-11-20 00:08:55,229 834396ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-20 00:08:55,238 834405ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-20 00:08:56,952 836118ms HomeController         Index              - lo4net OK
+INFO  2021-11-20 00:09:00,348 839514ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-20 00:09:00,362 839528ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-20 00:09:04,371 843537ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 08:55:17,117  8786ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 08:55:24,712 16381ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-21 08:55:24,757 16426ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-21 08:55:29,732 21402ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 08:55:31,883 23553ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 08:55:31,894 23564ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-21 08:55:34,817 26487ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 08:55:34,822 26492ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-21 08:55:36,909 28579ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 08:55:36,915 28585ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-21 08:55:38,650 30320ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 08:55:41,139 32808ms HomeController         MoveNext           - Caling GetAllCompanies
+INFO  2021-11-21 08:55:41,195 32864ms HomeController         MoveNext           - GetAllCompanies excecuted successfully
+INFO  2021-11-21 08:55:46,323 37992ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 08:56:08,592 60261ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 09:57:42,674 13983ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 09:57:47,546 18856ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-21 09:57:47,643 18952ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-21 09:59:39,378  2590ms HomeController         MoveNext           - Calling CompanyDetails function
+INFO  2021-11-21 09:59:47,904 11116ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 09:59:55,331 18543ms HomeController         MoveNext           - Caling GetAllCompanies
+INFO  2021-11-21 09:59:55,455 18668ms HomeController         MoveNext           - GetAllCompanies excecuted successfully
+INFO  2021-11-21 09:59:59,420 22632ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 09:59:59,473 22685ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-21 10:00:03,346 26558ms HomeController         MoveNext           - Calling ListSouthAfricanEmployees function
+INFO  2021-11-21 10:00:03,409 26622ms HomeController         MoveNext           - ListSouthAfricanEmployees executed successfully
+INFO  2021-11-21 10:00:50,874 74086ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 10:00:50,888 74101ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-21 10:00:58,204 81417ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 10:00:58,219 81431ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-21 10:01:07,118 90330ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 10:01:07,132 90344ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-21 10:01:15,385 98598ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 10:01:17,862 101075ms HomeController         MoveNext           - Caling GetAllCompanies
+INFO  2021-11-21 10:01:17,877 101090ms HomeController         MoveNext           - GetAllCompanies excecuted successfully
+INFO  2021-11-21 10:01:28,588 111800ms HomeController         Index              - lo4net OK
+INFO  2021-11-21 10:01:31,007 114219ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 10:01:31,023 114235ms HomeController         MoveNext           - ListAllEmployees executed successfully
+INFO  2021-11-21 10:01:34,598 117810ms HomeController         MoveNext           - Calling ListAllEmployees function
+INFO  2021-11-21 10:01:34,611 117824ms HomeController         MoveNext           - ListAllEmployees executed successfully

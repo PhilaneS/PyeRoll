@@ -1,0 +1,269 @@
+﻿@-ms-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    direction: ltr;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    font-family: 'UbuntuR', Helvetica, sans-serif;
+}
+
+    html body {
+   /*     background: url('images/bg.png') bottom right no-repeat, -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+        background: url('images/bg.png') bottom right no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+        background: url('images/bg.png') bottom right no-repeat, linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
+        filter: url('images/bg.png') bottom right no-repeat, progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+  */      height: 100vh;
+    }
+
+        html body .container-box {
+            width: 460px;
+            /* height: 500px;*/
+            margin: 0 auto;
+            background: #000;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -230px;
+            margin-top: -250px;
+            padding: 15px 16px 19px 15px;
+            background-color: #fff;
+            -webkit-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1);
+            -webkit-animation: slit-in-diagonal-1 0.8s ease-in-out forwards;
+            -moz-animation: slit-in-diagonal-1 0.8s ease-in-out forwards;
+            -o-animation: slit-in-diagonal-1 0.8s ease-in-out forwards;
+            -ms-animation: slit-in-diagonal-1 0.8s ease-in-out forwards;
+            animation: slit-in-diagonal-1 0.8s ease-in-out forwards;
+        }
+
+
+@-moz-keyframes slit-in-diagonal-1 {
+    0% {
+        -webkit-transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    54% {
+        -webkit-transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@-o-keyframes slit-in-diagonal-1 {
+    0% {
+        -webkit-transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    54% {
+        -webkit-transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@-ms-keyframes slit-in-diagonal-1 {
+    0% {
+        -webkit-transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    54% {
+        -webkit-transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@-webkit-keyframes slit-in-diagonal-1 {
+    0% {
+        -webkit-transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    54% {
+        -webkit-transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes slit-in-diagonal-1 {
+    0% {
+        -webkit-transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    54% {
+        -webkit-transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        transform: translateZ(0) rotate3d(1, 1, 0, 0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+html body .container-box label {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+html body .container-box .form-control {
+    font-size: 1em;
+}
+
+.logo {
+    background: url(images/payroll.png) no-repeat left top;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom:2em;
+    background-size: 32% auto;
+}
+
+    .logo h1 {
+        font-family: 'MotorwerkOblique';
+        color: #000;
+        font-size: 3em;
+        position: absolute;
+        top: -10px;
+        left: 130px;
+    }
+
+    .logo h2 {
+        font-family: Arial, sans-serif;
+        color: #4D2975;
+        font-size: 1.5em;
+        position: absolute;
+        top: 80px;
+        text-align: center;
+        width: 100%;
+    }
+
+.btn-primary {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+    .btn-primary:hover {
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+@media (max-width: 514px) {
+    .logo h1 {
+        top: 40px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 10em;
+    }
+
+    .logo h2 {
+        top: 200px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .logo {
+        height: 150px;
+        background-position: top center;
+        background-size: 45% auto;
+    }
+
+    .container-box {
+        max-width: 460px;
+        width: 92% !important;
+        margin: 30px auto 0px auto !important;
+        position: static !important;
+        height: auto !important;
+    }
+}

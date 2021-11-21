@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-xs-6 col-md-3">
+        <div class="body-content">
+
+
+            @if (Request.IsAuthenticated)
+            {
+                <div class="clearfix">&nbsp;</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <a href="@Url.Content("~/Home/ListAllCompanies")">
+                                <div class="blue-bg blocks">
+                                    <img src="~/images/Companies.png" style="width:210px" />
+                                    <a class="bott" href="@Url.Content("~/Home/ListAllCompanies")">Companies <i class="fa fa-arrow-circle-right pull-right" aria-hidden="true"></i></a>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="@Url.Content("~/Home/ListAllEmployees")">
+                                <div class="green-bg blocks">
+                                    <img src="~/images/employees.jpg" style="width:210px" />
+                                    <a class="bott" href="@Url.Content("~/Home/ListAllEmployees")">Employees <i class="fa fa-arrow-circle-right pull-right" aria-hidden="true"></i></a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <a href="@Url.Content("~/Home/ListSouthAfricanEmployees")">
+                                <div class="orange-bg blocks">
+                                    <img src="~/images/payroll.png" style="width:210px" />
+                                    <i class="style fa fa-home" aria-hidden="true"></i>
+                                <a class="bott" href="@Url.Content("~/Home/ListSouthAfricanEmployees")">List South African Employees <i class="fa fa-arrow-circle-right pull-right" aria-hidden="true"></i></a>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>               
+
+            }
+            else
+            {
+                <h1>Please Login to begin</h1>
+            }
+        </div>
+    </div>
+</div>
+
+
